@@ -1,3 +1,4 @@
+"use strict";
 const numberOfFilms = +prompt('солько фильмов вы посмотрели?', '');
 
 const personalMovieDB = {
@@ -8,51 +9,37 @@ const personalMovieDB = {
     privat: false
 };
 
-const a = prompt("Один из последних просмотренних фильмов", ''),
-    b = prompt('На сколько вы его оцените', ''),
-    c = prompt("Один из последних просмотренних фильмов", ''),
-    d = prompt('На сколько вы его оцените', '');
+let i = 0;
+do {
+    i++;
+    const a = prompt("Один из последних просмотренних фильмов", ''),
+        b = prompt('На сколько вы его оцените', '');
 
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
+    if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+        personalMovieDB.movies[a] = b;
+        console.log('Dane');
+    } else {
+        i--;
+        console.log('Arror');
+    }
+
+} while (i < 2);
+
+if (personalMovieDB.count < 10) {
+    console.log('Мало');
+} else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+    console.log('не плохо');
+} else if (personalMovieDB.count >= 30) {
+    console.log('вы киноман');
+} else {
+    console.log('Ошибка');
+}
+
+
+
 
 console.log(personalMovieDB);
 
-if (4) {
-    console.log('Ok');
-} else {
-    console.log('Error');
-}
-
-//----Условие----- if--else----------else if-----
-//------ switch - case - break - default
-
-if (number < 49) {
-    console.log('Error');
-} else if (number > 100) {
-    console.log("Много");
-} else {
-    console.log('OK');
-}
-
-(number === 50) ? console.log('OK') : console.log("Error");
 
 
 
-const number = 50;
-
-switch (number) {
-    case 49:
-        console.log('неверно');
-        break;
-    case 100:
-        console.log('неверно');
-        break;
-    case 51:
-        console.log('верно');
-        break;
-    default:
-        console.log('не в этот раз');
-        break;
-
-}
