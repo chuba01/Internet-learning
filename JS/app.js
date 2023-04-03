@@ -1,30 +1,194 @@
 "use strict";
 
+let numberOfFilms;
 
-let num = 20;
+function start() {
+    numberOfFilms = +prompt('СОЛИЧЕСТВО ФИЛЬМОВ');
 
-function showFirstMessage(text,) {
-    console.log(text);
-
-    console.log(num);
+    while (numberOfFilms == "" || numberOfFilms == null || isNaN(numberOfFilms)) {
+        numberOfFilms = +prompt('СОЛИЧЕСТВО ФИЛЬМОВ');
+    }
 }
 
-showFirstMessage('Hello Wold');
-console.log(num);
+start();
+
+const personalMuviDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
 
 
-function calc() {
-    let nun = 50;
-    return nun;
+
+function rememberMyFilms() {
+    for (let i = 0; i < 2; i++) {
+        const a = prompt("Один из последних просмотренних фильмов", ''),
+            b = prompt('На сколько вы его оцените', '');
+
+        if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+            personalMuviDB.movies[a] = b;
+            console.log('Dane');
+        } else {
+            i--;
+            console.log('Arror');
+        }
+
+    }
 }
 
-console.log(calc());
+// rememberMyFilms();
 
-const calc = (a, b) => {
-    console.log('1');
-    return a + b;
+
+
+
+
+
+function detegPersonalLevel() {
+    if (personalMuviDB.count < 10) {
+        console.log('Мало');
+    } else if (personalMuviDB.count >= 10 && personalMuviDB.count < 30) {
+        console.log('не плохо');
+    } else if (personalMuviDB.count >= 30) {
+        console.log('вы киноман');
+    } else {
+        console.log('Ошибка');
+    }
 }
 
-console.log(calc(5, 6));
+// detegPersonalLevel();
+
+function showMyDB(hidden) {
+    if (!hidden) {
+        console.log(personalMuviDB);
+    }
+}
+
+showMyDB(personalMuviDB.privat);
+
+
+function writeYourGenres() {
+    for (let i = 1; i <= 3; i++) {
+
+        const genre = prompt(`Ваш любимый жанр ${i}`)
+        personalMuviDB.genres[i - 1] = genre;
+    }
+}
+
+writeYourGenres();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const str = 'test hello';
+
+// console.log(str.slice(5, 9));
+
+// const arr = [1, 2, 3, 4, 5];
+
+// console.log(arr.length);
+
+
+// const st1r = 'test hello';
+
+// console.log(st1r.substring(8, 5));
+
+
+// const num = 12.2;
+
+// console.log(Math(num) );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let num = 20;
+
+// function showFirstMessage(text,) {
+//     console.log(text);
+
+//     console.log(num);
+// }
+
+// showFirstMessage('Hello Wold');
+// console.log(num);
+
+
+// function calc() {
+//     let nun = 50;
+//     return nun;
+// }
+
+// console.log(calc());
+
+// const calc = (a, b) => {
+//     console.log('1');
+//     return a + b;
+// }
+
+// console.log(calc(5, 6));
 
 
