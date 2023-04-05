@@ -77,29 +77,31 @@
 
 // writeYourGenres();
 //------------------------------kолбек-------
-function first() {
-    setTimeout(function () {
-        console.log(1);
-    }, 500);
-}
+// function first() {
+//     setTimeout(function () {
+//         console.log(1);
+//     }, 500);
+// }
 
-function second() {
-    console.log(2);
-}
+// function second() {
+//     console.log(2);
+// }
 
-first();
-second();
+// first();
+// second();
 
-function learnJs(lang, callback) {
-    console.log(`я учу : ${lang}`);
-    callback();
+// function learnJs(lang, callback){
+//     console.log(`я учу : ${lang}`);
+// callback();
 
-}
+// }
+
+// function done (){
+//     console.log('Я прошел этот урок');
+// }
 
 
-learnJs('JavaScript'() => {
-    console.log('Я прошел этот урок');
-});
+// learnJs('JavaScript',done );
 
 
 
@@ -114,18 +116,48 @@ learnJs('JavaScript'() => {
 //     widht: 1024,
 //     height: 1024,
 //     colors: {
-//         border: 'black'
+//         border: 'black',
+//         color: 'blue'
 //     },
 //     make:function(){
-//         console.log(options.colors);
+//         console.log('test');
 //     }
 // };
 
+
+
+
+
+
 // options.make();
 
-// const {border} = options.colors;
+// const {border,color} = options.colors;
 
 // console.log(Object.keys(options).length);
+
+// let counter = 0;
+// for (let key in options){
+//     if(typeof(options[key]) === 'object'){
+//         for(let i in options[key]){
+//             console.log(`Свойства ${i} Значение ${options[key][i]}`);
+           
+//         }
+//     }else{
+//         console.log(`Свойства ${key} Значение ${options[key]}`);
+//         counter++;
+//     }
+
+// }
+
+// console.log(counter);
+
+
+// ----- Массивы псевдо массивы-------------21
+
+
+
+
+
 
 
 
