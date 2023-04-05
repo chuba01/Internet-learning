@@ -1,82 +1,133 @@
-"use strict";
+// "use strict";
 
-let numberOfFilms;
+// let numberOfFilms;
 
-function start() {
-    numberOfFilms = +prompt('СОЛИЧЕСТВО ФИЛЬМОВ');
+// function start() {
+//     numberOfFilms = +prompt('СОЛИЧЕСТВО ФИЛЬМОВ');
 
-    while (numberOfFilms == "" || numberOfFilms == null || isNaN(numberOfFilms)) {
-        numberOfFilms = +prompt('СОЛИЧЕСТВО ФИЛЬМОВ');
-    }
+//     while (numberOfFilms == "" || numberOfFilms == null || isNaN(numberOfFilms)) {
+//         numberOfFilms = +prompt('СОЛИЧЕСТВО ФИЛЬМОВ');
+//     }
+// }
+
+// start();
+
+// const personalMuviDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+// };
+
+
+
+// function rememberMyFilms() {
+//     for (let i = 0; i < 2; i++) {
+//         const a = prompt("Один из последних просмотренних фильмов", ''),
+//             b = prompt('На сколько вы его оцените', '');
+
+//         if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+//             personalMuviDB.movies[a] = b;
+//             console.log('Dane');
+//         } else {
+//             i--;
+//             console.log('Arror');
+//         }
+
+//     }
+// }
+
+// // rememberMyFilms();
+
+
+
+
+
+
+// function detegPersonalLevel() {
+//     if (personalMuviDB.count < 10) {
+//         console.log('Мало');
+//     } else if (personalMuviDB.count >= 10 && personalMuviDB.count < 30) {
+//         console.log('не плохо');
+//     } else if (personalMuviDB.count >= 30) {
+//         console.log('вы киноман');
+//     } else {
+//         console.log('Ошибка');
+//     }
+// }
+
+// // detegPersonalLevel();
+
+// function showMyDB(hidden) {
+//     if (!hidden) {
+//         console.log(personalMuviDB);
+//     }
+// }
+
+// showMyDB(personalMuviDB.privat);
+
+
+// function writeYourGenres() {
+//     for (let i = 1; i <= 3; i++) {
+
+//         personalMuviDB.genres[i - 1] = prompt(`Ваш любимый жанр ${i}`);
+//     }
+// }
+
+// writeYourGenres();
+//------------------------------kолбек-------
+function first() {
+    setTimeout(function () {
+        console.log(1);
+    }, 500);
 }
 
-start();
-
-const personalMuviDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
-};
-
-
-
-function rememberMyFilms() {
-    for (let i = 0; i < 2; i++) {
-        const a = prompt("Один из последних просмотренних фильмов", ''),
-            b = prompt('На сколько вы его оцените', '');
-
-        if (a != null && b != null && a != '' && b != '' && a.length < 50) {
-            personalMuviDB.movies[a] = b;
-            console.log('Dane');
-        } else {
-            i--;
-            console.log('Arror');
-        }
-
-    }
+function second() {
+    console.log(2);
 }
 
-// rememberMyFilms();
+first();
+second();
 
+function learnJs(lang, callback) {
+    console.log(`я учу : ${lang}`);
+    callback();
 
-
-
-
-
-function detegPersonalLevel() {
-    if (personalMuviDB.count < 10) {
-        console.log('Мало');
-    } else if (personalMuviDB.count >= 10 && personalMuviDB.count < 30) {
-        console.log('не плохо');
-    } else if (personalMuviDB.count >= 30) {
-        console.log('вы киноман');
-    } else {
-        console.log('Ошибка');
-    }
 }
 
-// detegPersonalLevel();
 
-function showMyDB(hidden) {
-    if (!hidden) {
-        console.log(personalMuviDB);
-    }
-}
-
-showMyDB(personalMuviDB.privat);
+learnJs('JavaScript'() => {
+    console.log('Я прошел этот урок');
+});
 
 
-function writeYourGenres() {
-    for (let i = 1; i <= 3; i++) {
 
-        const genre = prompt(`Ваш любимый жанр ${i}`)
-        personalMuviDB.genres[i - 1] = genre;
-    }
-}
 
-writeYourGenres();
+
+
+
+//--------------------деструктуризация объектов-------------------------------------------------------------------------------------------------
+
+// const options = {
+//     name: 'test',
+//     widht: 1024,
+//     height: 1024,
+//     colors: {
+//         border: 'black'
+//     },
+//     make:function(){
+//         console.log(options.colors);
+//     }
+// };
+
+// options.make();
+
+// const {border} = options.colors;
+
+// console.log(Object.keys(options).length);
+
+
 
 
 
